@@ -1,0 +1,22 @@
+@if (lego){
+    <mat-card class="lego-card" appearance="outlined">
+        <mat-card-header>
+          <mat-card-title>{{ lego.title }}</mat-card-title>
+          <mat-card-subtitle>for {{ lego.platform }}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src={{ lego.imageLink }} alt="Photo of" {{ lego.title }}>
+        <mat-card-content>
+            <b>{{ lego.price }}</b>
+            <p>
+                {{ lego.description }}
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-icon-button (click)="addLegoToCart(lego)">
+                <mat-icon>
+                    add_shopping_cart
+                </mat-icon>
+            </button>
+        </mat-card-actions>
+    </mat-card>
+}

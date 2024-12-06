@@ -1,0 +1,13 @@
+<h1>Bem vindo a Lego Store!</h1>
+
+<div class="catalog">
+    <div class="product-card" *ngFor="let product of products">
+        <img [src]="product.image" alt="{{ product.name }}" />
+        <h2>{{ product.name }}</h2>
+        <p>Preço: R$ {{ product.price }}</p>
+
+            <button (click)="addToCart(product)">Adicionar ao Carrinho</button>
+
+    </div>
+</div>
+
